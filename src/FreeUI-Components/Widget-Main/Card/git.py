@@ -3,9 +3,9 @@ import os , random
 for i in range(200):
     d = str(i) + 'days ago'
     rand = random.randrange(1, 12)
-    with open('test.py','a') as file:
+    with open('test.rs','a') as file:
         file.write(d+'\n')
-    os.system('git add test.py')
+    os.system('git add test.rs')
     os.system('git commit --date=" 2020-'+str(rand)+'-'+d+'" -m 1')
 os.system('git push -u origin main')
 
