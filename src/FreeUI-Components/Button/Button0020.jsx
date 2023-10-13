@@ -111,7 +111,7 @@ const props = {
     width: 100%;
     height: 100%;
   }
-uu
+uuu
   &:active::after {
     transition: 0s;
     transform: translate(0, 5%);
