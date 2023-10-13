@@ -83,7 +83,7 @@ const props = {
         <Button0028>Button0028</Button0028>
   )`,
   component: <Button0028>Button0028</Button0028>,
-};
+};z
 return (
   <>
     <Widget src="freeui.testnet/widget/CardMain.CardMini" props={props} />
