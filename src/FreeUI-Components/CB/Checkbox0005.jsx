@@ -10,7 +10,7 @@ const Container = styled.label`
     height: 0;
     width: 0;
   }
-  updaupupdatedatete
+  updaupupdateupdatedatete
   & svg {
     position: relative;
     top: 0;
