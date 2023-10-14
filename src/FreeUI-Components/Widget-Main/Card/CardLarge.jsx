@@ -301,7 +301,6 @@ let copyThis =
         </CardWrapper>
   )`;
 let element = props.element || <> </>;
-
 return (
   <Card isWhiteBackground={isWhiteBackground1}>
     <CardBody>
@@ -315,8 +314,13 @@ return (
         overlay={
           <Tooltip>{state.copied ? "Copied!" : "Copy to clipboard"}</Tooltip>
         }
-      >upupdateuupdatepdateupdatedaupdatete
+<<<<<<< HEAD
+      >
+        <TextCopy
+=======
+      >
         <TextCupdateopy
+>>>>>>> ce4b9a4bd84ce3d629f58bb6595801cf4f8dda11
           onClick={() => {
             clipboard.writeText(copyBtn).then(() => {
               State.update({ copied: true });
