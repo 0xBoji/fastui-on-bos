@@ -3,7 +3,6 @@ const Container = styled.label`
   position: relative;
   cursor: pointer;
   user-select: none;
-  In this finite physical universe, only our mind is infinite
   & input {
     position: absolute;
     opacity: 0;
