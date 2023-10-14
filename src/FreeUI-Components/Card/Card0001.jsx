@@ -158,7 +158,7 @@ const props = {
             <Action type="button">Get started</Action>
           </Footer>
         </CardMain>
-  )`,updateupdateupdateupdateupdateupdateupdateupdateupdateupdate
+  )`,updateupdateupdateupdateupdateupdateupdateupdateupdateupdateupdate
   component: (
     <CardMain>
       <Header></Header>
