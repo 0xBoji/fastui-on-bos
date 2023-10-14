@@ -1,136 +1,115 @@
-const ContainerBox = styled.div`
+const CardMain = styled.div`
   position: relative;
-  font-family: sans-serif;
-`;
-
-const Box = styled.div`
   width: 220px;
   height: 270px;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.074);
-  border: 1px solid rgba(255, 255, 255, 0.222);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-radius: 0.7rem;
-  transition: all ease 0.3s;
-
+  background: mediumturquoise;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
 
-  .title {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: lightblue;
+    transition: all 0.5s;
   }
 
-  div strong {
-    display: block;
-    margin-bottom: 0.5rem;
+  &:before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
   }
 
-  div p {
-    margin: 0;
-    font-size: 0.9em;
-    font-weight: 300;
-    letter-spacing: 0.1em;
+  &:after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
   }
 
-  div span {
-    font-size: 0.7rem;
-    font-weight: 300;
-
-    &:nth-child(3) {
-      font-weight: 500;
-      margin-right: 0.2rem;
-    }
+  &:hover:before,
+  &:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
   }
 
-  &:hover {
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
-    border: 1px solid rgba(255, 255, 255, 0.454);
+  &:hover:after {
+    content: "HELLO";
   }
 `;
+
 const props = {
   copyBtn:
-    "const ContainerBox = styled.div`\n" +
-    `      position: relative;
-  font-family: sans-serif;
-` +
-    "\n`;" +
-    "\nconst Box = styled.div`\n" +
-    `      width: 220px;
+    "const CardMain = styled.div`\n" +
+    `  position: relative;
+  width: 220px;
   height: 270px;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.074);
-  border: 1px solid rgba(255, 255, 255, 0.222);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-radius: 0.7rem;
-  transition: all ease 0.3s;
-
+  background: mediumturquoise;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
 
-  .title {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: lightblue;
+    transition: all 0.5s;
   }
 
-  div strong {
-    display: block;
-    margin-bottom: 0.5rem;
+  &:before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
   }
 
-  div p {
-    margin: 0;
-    font-size: 0.9em;
-    font-weight: 300;
-    letter-spacing: 0.1em;
+  &:after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
   }
 
-  div span {
-    font-size: 0.7rem;
-    font-weight: 300;
-
-    &:nth-child(3) {
-      font-weight: 500;
-      margin-right: 0.2rem;
-    }
+  &:hover:before,
+  &:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
   }
 
-  &:hover {
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
-    border: 1px solid rgba(255, 255, 255, 0.454);
+  &:hover:after {
+    content: "HELLO";
   }
 ` +
     "\n`;" +
     `\n return(
-         <ContainerBox>
-            <Box>
-            <span className="title">GLASS EFFECT</span>
-            <div>
-                <strong>JOE WATSON SBF</strong>
-                <p>0000 000 000 0000</p>
-                <span>VALID</span> <span>01/28</span>
-            </div>
-            </Box>
-        </ContainerBox>
+    <CardMain>HOVER</CardMain>
   )`,
-  component: (
-    <ContainerBox>
-      <Box>
-        <span className="title">GLASS EFFECT</span>
-        <div>
-          <strong>JOE WATSON SBF</strong>
-          <p>0000 000 000 0000</p>
-          <span>VALID</span> <span>01/28</span>
-        </div>
-      </Box>
-    </ContainerBox>
-  ),
+  component: <CardMain>HOVER</CardMain>,
 };
 return (
   <>
