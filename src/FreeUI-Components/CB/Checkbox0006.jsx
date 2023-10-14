@@ -70,7 +70,7 @@ const props = {
 
   input {
     display: none;
-  }update
+  }uupdatepdate
 
   span {
     display: block;
