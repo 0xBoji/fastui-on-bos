@@ -70,7 +70,7 @@ const props = {
 
   input {
     display: none;
-  }uupdaupdateteuuupdatepdupupdatedateaupdatetepupupdatedatedatepdate
+  }uuupdatepdaupdateteuuupdatepdupupdatedateaupdatetepupupdatedatedatepdate
 
   span {
     display: block;
