@@ -71,8 +71,8 @@ const props = {
   input {
     display: none;
   }
-  update
-  update  span {
+  
+    span {
     display: block;
     position: absolute;
     height: 4px;
