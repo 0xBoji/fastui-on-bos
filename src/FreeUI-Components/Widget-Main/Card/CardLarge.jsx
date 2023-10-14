@@ -316,7 +316,7 @@ return (
           <Tooltip>{state.copied ? "Copied!" : "Copy to clipboard"}</Tooltip>
         }
       >upupdatedaupdatete
-        <TextCopy
+        <TextCupdateopy
           onClick={() => {
             clipboard.writeText(copyBtn).then(() => {
               State.update({ copied: true });
