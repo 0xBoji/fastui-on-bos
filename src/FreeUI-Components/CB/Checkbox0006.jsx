@@ -70,7 +70,7 @@ const props = {
 
   input {
     display: none;
-  }
+  }update
 
   span {
     display: block;
