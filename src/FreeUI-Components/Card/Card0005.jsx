@@ -1,135 +1,64 @@
-const ContainerBox = styled.div`
-  position: relative;
-  font-family: sans-serif;
-`;
-
-const Box = styled.div`
+const Card1 = styled.div`
   width: 220px;
   height: 270px;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.074);
-  border: 1px solid rgba(255, 255, 255, 0.222);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-radius: 0.7rem;
-  transition: all ease 0.3s;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  .title {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-  }
-
-  div strong {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  div p {
-    margin: 0;
-    font-size: 0.9em;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-  }
-
-  div span {
-    font-size: 0.7rem;
-    font-weight: 300;
-
-    &:nth-child(3) {
-      font-weight: 500;
-      margin-right: 0.2rem;
-    }
-  }
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
 
   &:hover {
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
-    border: 1px solid rgba(255, 255, 255, 0.454);
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
   }
 `;
+
+const Card2 = styled.div`
+  width: 220px;
+  height: 270px;
+  background-color: #1a1a1a;
+  transition: all 0.2s;
+  border-radius: 20px;
+
+  ${Card1}:hover & {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+`;
+
 const props = {
   copyBtn:
-    "const ContainerBox = styled.div`\n" +
-    `      position: relative;
-  font-family: sans-serif;
-` +
-    "\n`;" +
-    "\nconst Box = styled.div`\n" +
-    `      width: 220px;
+ "const Card1 = styled.div`\n" +
+    `   width: 220px;
   height: 270px;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.074);
-  border: 1px solid rgba(255, 255, 255, 0.222);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-radius: 0.7rem;
-  transition: all ease 0.3s;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  .title {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-  }
-
-  div strong {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  div p {
-    margin: 0;
-    font-size: 0.9em;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-  }
-
-  div span {
-    font-size: 0.7rem;
-    font-weight: 300;
-
-    &:nth-child(3) {
-      font-weight: 500;
-      margin-right: 0.2rem;
-    }
-  }
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
 
   &:hover {
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
-    border: 1px solid rgba(255, 255, 255, 0.454);
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+  }
+` +
+    "\n`;" +
+    "\nconst Card2 = styled.div`\n" +
+    `   width: 220px;
+  height: 270px;
+  background-color: #1a1a1a;
+  transition: all 0.2s;
+  border-radius: 20px;
+
+  ${Card1}:hover & {
+    transform: scale(0.98);
+    border-radius: 20px;
   }
 ` +
     "\n`;" +
     `\n return(
-         <ContainerBox>
-            <Box>
-            <span className="title">GLASS EFFECT</span>
-            <div>
-                <strong>JOE WATSON SBF</strong>
-                <p>0000 000 000 0000</p>
-                <span>VALID</span> <span>01/28</span>
-            </div>
-            </Box>
-        </ContainerBox>
+    <Card1>
+        <Card2></Card2>
+    </Card1>
   )`,
   component: (
-    <ContainerBox>
-      <Box>
-        <span className="title">GLASS EFFECT</span>
-        <div>
-          <strong>JOE WATSON SBF</strong>
-          <p>0000 000 000 0000</p>
-          <span>VALID</span> <span>01/28</span>
-        </div>
-      </Box>
-    </ContainerBox>
+    <Card1>
+        <Card2></Card2>
+    </Card1>
   ),
 };
 return (
