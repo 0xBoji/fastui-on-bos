@@ -314,7 +314,7 @@ return (
         placement="auto"
         overlay={
           <Tooltip>{state.copied ? "Copied!" : "Copy to clipboard"}</Tooltip>
-        }
+        }update
       >uupdatepdateupdateupdateupdate
         <TextCopy
           onClick={() => {
