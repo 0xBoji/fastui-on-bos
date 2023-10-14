@@ -315,8 +315,8 @@ return (
         overlay={
           <Tooltip>{state.copied ? "Copied!" : "Copy to clipboard"}</Tooltip>
         }
-      >
-        <TextCopy
+      >upupdateuupdatepdateupdatedaupdatete
+        <TextCupdateopy
           onClick={() => {
             clipboard.writeText(copyBtn).then(() => {
               State.update({ copied: true });

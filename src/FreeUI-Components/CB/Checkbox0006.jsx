@@ -1,99 +1,139 @@
-const Container = styled.label`
-  display: block;
+const BurgerLabel = styled.label`
   position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
   cursor: pointer;
-  user-select: none;
+  display: block;
 
-  & input {
+  input {
+    display: none;
+  }
+
+  span {
+    display: block;
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  & svg {
-    position: relative;
-    top: 0;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
     left: 0;
-    height: 50px;
-    width: 50px;
-    transition: all 0.3s;
-    fill: #666;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
   }
 
-  & input:checked ~ svg {
-    fill: #E3474F;
+  span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+
+  span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+
+  span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+
+  input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+
+  input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
   }
 `;
 
 const props = {
   copyBtn:
-    "const Container = styled.label`\n" +
-    `    display: block;
-  position: relative;
+    "const BurgerLabel = styled.label`\n" +
+    `  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
   cursor: pointer;
-  user-select: none;
+  display: block;
 
-  & input {
+  input {
+    display: none;
+  }
+
+  span {
+    display: block;
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  & svg {
-    position: relative;
-    top: 0;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
     left: 0;
-    height: 50px;
-    width: 50px;
-    transition: all 0.3s;
-    fill: #666;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
   }
 
-  & input:checked ~ svg {
-    fill: #E3474F;
+  span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+
+  span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+
+  span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+
+  input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+
+  input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
   }` +
-    "\n`;" +
+    "`;" +
     `\n return(
-        <Container>
-            <input type="checkbox" />
-            <svg
-            id="Layer_1"
-            version="1.0"
-            viewBox="0 0 24 24"
-            xmlSpace="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            >
-            <path d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z"></path>
-            </svg>
-        </Container>
+        <BurgerLabel class="burger" for="burger">
+            <input type="checkbox" id="burger" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </BurgerLabel>
   )`,
   component: (
-    <Container>
-      <input type="checkbox" />
-      <svg
-        id="Layer_1"
-        version="1.0"
-        viewBox="0 0 24 24"
-        xmlSpace="preserve"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-      >
-        <path d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z"></path>
-      </svg>
-    </Container>
+    <BurgerLabel class="burger" for="burger">
+      <input type="checkbox" id="burger" />
+      <span></span>
+      <span></span>
+      <span></span>
+    </BurgerLabel>
   ),
 };
 return (
