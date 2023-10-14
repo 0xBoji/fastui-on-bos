@@ -57,7 +57,7 @@ const BurgerLabel = styled.label`
     left: 5px;
   }
 `;
-updatupdatee
+updatupdateupdatee
 const props = {
   copyBtn:
     "const BurgerLabel = styled.label`\n" +
