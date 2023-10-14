@@ -71,7 +71,7 @@ const props = {
   input {
     display: none;
   }
-  updateupdateupdateupdateupdate
+  updateupdateupdateupdateupdateupdate
   span {
     display: block;
     position: absolute;
