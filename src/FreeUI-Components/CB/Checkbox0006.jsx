@@ -71,7 +71,7 @@ const props = {
   input {
     display: none;
   }
-  uupdateupdupdateupdateupdateatupdateepupdateupdupdateatedate
+  uupdateupdateupdupdateupdateupdateatupdateepupdateupdupdateatedate
     span {
     display: block;
     position: absolute;
