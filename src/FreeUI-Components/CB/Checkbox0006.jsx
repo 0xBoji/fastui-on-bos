@@ -72,7 +72,7 @@ const props = {
     display: none;
   }
   uupdauupdatepdaupdatetetupdateepupdateupupupdatedatedaupdateupdatetedupdateauupdatepdatetupdatee
-  span {
+  update  span {
     display: block;
     position: absolute;
     height: 4px;
