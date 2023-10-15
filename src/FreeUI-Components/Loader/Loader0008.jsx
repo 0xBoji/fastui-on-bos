@@ -38,7 +38,7 @@ const props = {
     calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px,
     calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px;
   animation: s7 1s infinite steps(8);
-  UpdateComponentUpdateComponentss
+  UpdateCoUpdateComponentsmponentUpdateComponentss
   @keyframes s7 {
     100% {
       transform: rotate(1turn);
