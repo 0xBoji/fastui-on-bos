@@ -107,7 +107,7 @@ const props = {
     }
     75% {
       transform: translateY(100%);
-    }
+    }UpdateComponents
   }
 
   @keyframes up {
