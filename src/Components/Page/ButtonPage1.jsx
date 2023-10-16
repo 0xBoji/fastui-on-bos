@@ -7,7 +7,7 @@ const CardGrid = styled.div`
   padding-bottom: 20px;
   white-space: nowrap;
 `;
-UpUpUpdUpdateatedatedaUpdatetUUpUpdatedatepdateeUUpdatepdate
+UpUpUpdUpdateatedatedUpdateaUpdatetUUpUpdatedatepdateeUUpdatepdate
 const Text = styled.p`
   font-size: 10px;
 `;
