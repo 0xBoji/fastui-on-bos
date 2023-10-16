@@ -14,9 +14,9 @@ const Text = styled.p`
 
 const widgetList = [];
 
-for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 7; i++) {
   const paddedNumber = i.toString().padStart(4, "0");
-  const widgetSrc = `freeui.testnet/widget/CB.CheckBox${paddedNumber}`;
+  const widgetSrc = `freeui.testnet/widget/Loader.Loader${paddedNumber}`;
   widgetList.push(<Widget key={i} src={widgetSrc} />);
 }
 
