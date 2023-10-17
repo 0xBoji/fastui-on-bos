@@ -215,7 +215,7 @@ return (
               }
             });
           }}
-        >UpdUUUpUpdUUpdatepdateUUpdatepdateatUpdateedatepdatepdaUpdateteate
+        >UpdUUUpUpdUUpdatepdateUpdateUUpdatepdateatUpdateedatepdatepdaUpdateteate
           Copy
           {state.copied ? (
             <>
