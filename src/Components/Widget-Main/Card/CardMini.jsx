@@ -15,7 +15,7 @@ const CenteredCardWrapper = styled.div`
 
 const Card = styled.div`
   padding: 30px;
-  background: ${(props) => (props.isWhiteBackground ? "#e8e8e8" : "#212121")};
+  background: ${(props) => (props.isWhiteBackground ? "#000000" : "#fffff")};
   width: 280px;
   height: 270px;
   display: flex;
@@ -120,8 +120,8 @@ const ColorText = styled.div`
 `;
 
 const ButtonCopy = styled.button`
-  width: 100px;
-  height: 35px;
+  width: 80px;
+  height: 30px;
   display: flex;
   align-items: center;
   background-color: #0a1929ff;
@@ -139,7 +139,6 @@ const ButtonCopy = styled.button`
   &:hover .svgIcon {
     background-color: #0a1929ff;
   }
-
 `;
 
 const TextCopy = styled.span`
@@ -153,66 +152,50 @@ const TextCopy = styled.span`
   background-color: #0a1929ff;
 `;
 
-const SvgIconCopy = styled.span`
-  width: 30%;
-  height: 100%;
+const [isToggleSave1, setIsToggleSave1] = useState(false);
+const toggleSaveButton1 = () => {
+  setIsToggleSave1((prevState) => !prevState); // Toggle the save button state
+};
+const SaveButton = styled.button`
+  width: 2.3rem;
+  height: 30px;
+  background-color: ${(props) => (props.isToggled ? "#f79a55" : "#0a1929ff")};
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px; /* Adjust the vertical position */
+  left: 10px; /* Adjust the horizontal position */
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
   color: white;
-  background-color: #0a1929ff;
-
-  svg {
-    fill: white;
-  }
+  transition: background-color 300ms;
 `;
 
-const SaveButton = styled.button`
-  width: 100px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  background-color: #0a1929ff;
-  color: white;
-  border-radius: 2em;
-  padding: 0.5rem;
-  position: absolute; 
-  bottom: 10px;
-  right: 130px;
-  
-  &:hover {
-    background-color: #0a1929ff;
-  }
-  
-
-`;
-
-const SaveIcon = styled.svg`
-  width: 25%;
-  height: 20px;
-  color: white;
-
-  margin-left: 0.55rem;
-  &:active {
-    background-color: transparent
-  }
-`;
-
-const SaveText = styled.span`
-  width: 75%;
-
-  font-size: 0.6rem;
-`;
+const SaveIcon = (
+  <i
+    className={
+      isToggleSave1 ? "bi bi-bookmark-heart-fill" : "bi bi-bookmark-heart"
+    }
+  ></i>
+);
 
 let copyBtn = props.copyBtn || "Copy Button";
 props.copyBtn || <></>;
 let component = props.component || <> </>;
+let save = props.save || <> </>;
 
 return (
-  <Card isWhiteBackground={isWhiteBackground1}>
+  <Card isWhiteBackground={!isWhiteBackground1}>
     <CardBody>
       <CenteredCardWrapper>{component}</CenteredCardWrapper>
-      <ColorText>{isToggleOn1 ? "#212121" : "#e8e8e8"}</ColorText>
+      <SaveButton onClick={toggleSaveButton1} isToggled={isToggleSave1}>
+        {SaveIcon}
+        {save}
+      </SaveButton>
+      <ColorText>{isToggleOn1 ? "#FFFFFF" : "#000000"}</ColorText>
       <ToggleButton onClick={toggleButton1} isToggled={isToggleOn1}>
         {isToggleOn1 ? SunIcon : MoonIcon}
       </ToggleButton>
