@@ -16,7 +16,7 @@ const CenteredCardWrapper = styled.div`
 const Card = styled.div`
   top:20px;
   padding: 30px;
-  background: ${(props) => (props.isWhiteBackground ? "#e8e8e8" : "#1e1e1e")};
+  background: ${(props) => (props.isWhiteBackground ? "#000000" : "#fffff")};
   width: 100%;
   height: 80vh;
   display: flex;
@@ -266,21 +266,53 @@ const TextArea = styled.textarea`
   outline: none;
 `;
 
+const [isToggleSave1, setIsToggleSave1] = useState(false);
+const toggleSaveButton1 = () => {
+  setIsToggleSave1((prevState) => !prevState); // Toggle the save button state
+};
+const SaveButton = styled.button`
+  width: 2.3rem;
+  height: 30px;
+  background-color: ${(props) => (props.isToggled ? "#f79a55" : "#0a1929ff")};
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px; /* Adjust the vertical position */
+  left: 10px; /* Adjust the horizontal position */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  transition: background-color 300ms;
+`;
+
+const SaveIcon = (
+  <i
+    className={
+      isToggleSave1 ? "bi bi-bookmark-heart-fill" : "bi bi-bookmark-heart"
+    }
+  ></i>
+);
+
 let copyBtn = props.copyBtn || "Copy Button";
 props.copyBtn || <></>;
 let component = props.component || <> </>;
-
-let text = props.text || "Text";
-props.text || <></>;
+let save = props.save || <> </>;
 
 return (
   <div className="container-fluid">
     <div className="row">
       <div className="col-md-6">
-        <Card isWhiteBackground={isWhiteBackground1}>
+        <Card isWhiteBackground={!isWhiteBackground1}>
           <CardBody>
             <CenteredCardWrapper>{component}</CenteredCardWrapper>
-            <ColorText>{isToggleOn1 ? "#212121" : "#1e1e1e"}</ColorText>
+            <SaveButton onClick={toggleSaveButton1} isToggled={isToggleSave1}>
+              {SaveIcon}
+              {save}
+            </SaveButton>
+            <ColorText>{isToggleOn1 ? "#FFFFFF" : "#000000"}</ColorText>
             <ToggleButton onClick={toggleButton1} isToggled={isToggleOn1}>
               {isToggleOn1 ? SunIcon : MoonIcon}
             </ToggleButton>
