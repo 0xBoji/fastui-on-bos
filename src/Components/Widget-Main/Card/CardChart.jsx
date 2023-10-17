@@ -215,7 +215,7 @@ return (
               }
             });
           }}
-        >
+        >Update
           Copy
           {state.copied ? (
             <>
