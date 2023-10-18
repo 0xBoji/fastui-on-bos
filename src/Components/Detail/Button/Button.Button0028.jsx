@@ -135,5 +135,5 @@ return (
   </>
 );
 
-Update detailUpdate detailUpdate detail
+Update detailUpdate detailUpdate detailUpdate detail
 Update detailUpdate detailUpdate detail
