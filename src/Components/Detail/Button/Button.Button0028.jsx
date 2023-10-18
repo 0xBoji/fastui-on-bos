@@ -135,5 +135,3 @@ return (
   </>
 );
 
-Update detailUpdate detailUpdate detailUpdate detail
-Update detailUpUpdate detaildate Update detaildetailUpdate detail
