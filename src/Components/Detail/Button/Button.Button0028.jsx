@@ -133,5 +133,5 @@ return (
   <>
     <Widget src="freeui.testnet/widget/CardMain.CardDetail" props={props} />
   </>
-);
-Update detailUpdate detailUpdate detail
+);Update detail
+Update detailUpdate detailUpdate detailUpdate detail
