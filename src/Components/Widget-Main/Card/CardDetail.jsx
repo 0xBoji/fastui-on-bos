@@ -231,7 +231,7 @@ const SvgIconCopy = styled.span`
   }
 `;
 Update detail
-
+Update detail
 
 
 
