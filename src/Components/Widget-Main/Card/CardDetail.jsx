@@ -18,7 +18,7 @@ const Card = styled.div`
   padding: 30px;
   background: ${(props) => (props.isWhiteBackground ? "#000000" : "#fffff")};
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
@@ -241,7 +241,7 @@ const EditorContainer = styled.div`
   border-radius: 14px;
   padding: 10px;
   position: relative;
-  height: 80vh;
+  height: 70vh;
 `;
 
 const TextAreaWrapper = styled.div`
