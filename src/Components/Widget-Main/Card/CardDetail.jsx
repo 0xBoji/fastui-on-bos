@@ -230,7 +230,7 @@ const SvgIconCopy = styled.span`
     fill: white;
   }
 `;
-Update detailUpdate detail
+Update detailUpdate detailUpdate detail
 
 
 const EditorContainer = styled.div`
