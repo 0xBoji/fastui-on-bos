@@ -231,7 +231,7 @@ const SvgIconCopy = styled.span`
   }
 `;
 
-Update detail widget
+Update dUpdate detail widgetetail widget
 
 const EditorContainer = styled.div`
   top:20px;
