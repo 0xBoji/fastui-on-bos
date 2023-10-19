@@ -231,7 +231,7 @@ const SvgIconCopy = styled.span`
   }
 `;
 
-Update detaUpUpdate detaildate detailiUpdatUpdate detaile detaillUpdate detail
+Update detaUpdate detailUpUpdate detaildate detailiUpdatUpdate detaile detaillUpdate detail
 
 const EditorContainer = styled.div`
   top:20px;
