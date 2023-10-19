@@ -231,7 +231,7 @@ const SvgIconCopy = styled.span`
   }
 `;
 
-Update detail widgetconst EditorContainer = styled.div`
+UpdaUpdate detail widgette detail widgetconst EditorContainer = styled.div`
   top:20px;
   background-color: #1e1e1e;
   color: #d4d4d4;
